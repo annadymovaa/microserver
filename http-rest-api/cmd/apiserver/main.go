@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/avito-test/http-rest-api/cmd/inetrnal/app/apiserver"
+	"github.com/annadymovaa/avito-test/blob/start/http-rest-api/cmd/inetrnal/app/apiserver"
 )
 
 func main() {
