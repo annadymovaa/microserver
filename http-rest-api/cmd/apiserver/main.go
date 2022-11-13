@@ -5,9 +5,7 @@ import (
 	"log"
 
 	"github.com/BurntSushi/toml"
-	"github.com/annadymovaa/avito-test/tree/main/http-rest-api/cmd/inetrnal/app/apiserver"
-	//"honnef.co/go/tools/config"
-	//"github.com/annadymovaa/avito-test/tree/start/http-rest-api/cmd/inetrnal/app/apiserver"
+	"github.com/annadymovaa/avito-test/cmd/inetrnal/app/apiserver"
 )
 
 var (
@@ -27,7 +25,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	s := apiserver.New()
+	s := apiserver.New(config)
 	if err := s.Start(); err != nil {
 		log.Fatal(err)
 	}
