@@ -1,3 +1,3 @@
-module github.com/annadymovaa/avito-test/http-rest-api
+module github.com/annadymovaa/avito-test
 
 go 1.19
