@@ -1,1 +1,2 @@
 bind_addr = ":5432"
+log_level = "debug"
