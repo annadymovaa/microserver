@@ -12,7 +12,7 @@ type Store struct {
 }
 
 func New(config *Config) *Store {
-	return &Config{
+	return &Store{
 		config: config,
 	}
 }
