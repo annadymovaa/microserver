@@ -2,8 +2,10 @@ package store
 
 import (
 	"database/sql"
+	"fmt"
 
 	_ "github.com/lib/pq"
+	//"github.com/jmoiron/sqlx"
 )
 
 type Store struct {
@@ -29,6 +31,8 @@ func (s *Store) Open() error {
 	}
 
 	s.db = db
+
+	fmt.Println("Connected!")
 
 	return nil
 }
