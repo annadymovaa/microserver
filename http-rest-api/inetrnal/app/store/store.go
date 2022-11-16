@@ -9,8 +9,9 @@ import (
 )
 
 type Store struct {
-	config *Config
-	db     *sql.DB
+	config        *Config
+	db            *sql.DB
+	accRepository *AccRepository
 }
 
 func New(config *Config) *Store {
@@ -40,4 +41,16 @@ func (s *Store) Open() error {
 func (s *Store) Close() {
 	s.db.Close()
 
+}
+
+func (s *Store) Account() *AccRepository {
+	if s.accRepository != nil {
+		return s.accRepository
+	}
+
+	s.accRepository = &AccRepository{
+		store: s,
+	}
+
+	return s.accRepository
 }
