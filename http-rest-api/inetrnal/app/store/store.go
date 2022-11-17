@@ -11,7 +11,7 @@ import (
 type Store struct {
 	config        *Config
 	db            *sql.DB
-	accRepository *AccRepository
+	accRepository *Repository
 }
 
 func New(config *Config) *Store {
@@ -43,12 +43,12 @@ func (s *Store) Close() {
 
 }
 
-func (s *Store) Account() *AccRepository {
+func (s *Store) Account() *Repository {
 	if s.accRepository != nil {
 		return s.accRepository
 	}
 
-	s.accRepository = &AccRepository{
+	s.accRepository = &Repository{
 		store: s,
 	}
 

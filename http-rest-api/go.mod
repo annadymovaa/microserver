@@ -11,6 +11,7 @@ require (
 )
 
 require (
+	github.com/araddon/dateparse v0.0.0-20210429162001-6b43995a97de
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/golang-migrate/migrate v3.5.4+incompatible
 	github.com/pmezard/go-difflib v1.0.0 // indirect
