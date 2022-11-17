@@ -1,4 +1,4 @@
-package model
+package account
 
 //import "time"
 
@@ -12,25 +12,6 @@ type Account struct {
 	Id_user    uint64 `json: "id_user`
 	Amount     int    `json: "amount"`
 	Type_acc   string `json: "type_acc" sql:"type:type_account"`
-}
-
-type Service struct {
-	Id_service uint64
-	Price      int
-}
-
-type Order struct {
-	Id_order uint64
-}
-
-type Transaction struct {
-	Id_transaction uint64
-	Price          int
-	Ta_type        string `sql:"type_transaction"`
-	Ta_time        string `sql:"timestamp"`
-
-	From_acc uint64
-	To_acc   uint64
 }
 
 // func (a *Account) Validate() error {
