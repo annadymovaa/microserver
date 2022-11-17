@@ -1,0 +1,5 @@
+bind_addr = ":5432"
+log_level = "debug"
+
+[store]
+database_url = "host=localhost user=annadymova password=TheDuck.83 port=5432 dbname=postgres sslmode=disable"
