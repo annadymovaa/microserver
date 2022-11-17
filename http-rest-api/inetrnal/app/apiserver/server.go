@@ -194,7 +194,7 @@ func (s *server) handleSessionsCreate() http.HandlerFunc {
 			return
 		}
 
-		session.Values["user_id"] = a.Id_user
+		session.Values["user_id"] = req.Id_user
 		if err := s.sessionStore.Save(r, w, session); err != nil {
 			s.error(w, r, http.StatusInternalServerError, err)
 			return
