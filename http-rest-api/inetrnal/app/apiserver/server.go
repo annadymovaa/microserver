@@ -12,12 +12,9 @@ import (
 
 	"github.com/gorilla/handlers"
 
-	"github.com/annadymovaa/avito-test/inetrnal/app/account"
-	// "github.com/annadymovaa/avito-test/inetrnal/app/order"
-	// "github.com/annadymovaa/avito-test/inetrnal/app/service"
-	// "github.com/annadymovaa/avito-test/inetrnal/app/transaction"
+	"github.com/annadymovaa/microserver/inetrnal/app/account"
 
-	"github.com/annadymovaa/avito-test/inetrnal/app/store"
+	"github.com/annadymovaa/microserver/inetrnal/app/store"
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"

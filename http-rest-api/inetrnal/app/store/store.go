@@ -5,7 +5,6 @@ import (
 	"fmt"
 
 	_ "github.com/lib/pq"
-	//"github.com/jmoiron/sqlx"
 )
 
 type Store struct {

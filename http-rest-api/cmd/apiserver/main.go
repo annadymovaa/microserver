@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/BurntSushi/toml"
-	"github.com/annadymovaa/avito-test/inetrnal/app/apiserver"
+	"github.com/annadymovaa/microserver/inetrnal/app/apiserver"
 	//"github.com/annadymovaa/avito-test/tree/start/http-rest-api/inetrnal/app/apiserver"
 )
 
@@ -14,7 +14,8 @@ var (
 )
 
 func init() {
-	flag.StringVar(&configPath, "config-path", "configs/apiserver.toml", "path to config file")
+	flag.StringVar(&configPath, "config-path",
+		"configs/apiserver.toml", "path to config file")
 }
 
 func main() {

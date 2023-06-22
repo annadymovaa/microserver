@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: course_container
+    image: postgres
+
+    environment:
+      POSTGRES_USER: annadymova
+      POSTGRES_PASSWORD: pass1234
+      POSTGRES_DB: coursework
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: pg_isready -U annadymova -d coursework
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  migrate:
+      image: migrate/migrate
+
+      volumes:
+          - .:/migrations
+      command: ["-path", "migrations", "-database",  "postgres://localhost/coursework?sslmode=disable", "up", "3"]
+      links: 
+          - postgres
+      depends_on:
+      - postgres
+      ports:
+      - "127.0.0.1:80:8080"
+
+

@@ -11,7 +11,6 @@ type Account struct {
 	Id_account uint64 `json: "id_account"`
 	Id_user    uint64 `json: "id_user`
 	Amount     int    `json: "amount"`
-	Type_acc   string `json: "type_acc" sql:"type:type_account"`
 }
 
 // func (a *Account) Validate() error {

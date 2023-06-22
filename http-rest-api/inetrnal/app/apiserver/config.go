@@ -1,6 +1,6 @@
 package apiserver
 
-import "github.com/annadymovaa/avito-test/inetrnal/app/store"
+import "github.com/annadymovaa/microserver/inetrnal/app/store"
 
 type Config struct {
 	BindAddr string `toml:"bind_addr`

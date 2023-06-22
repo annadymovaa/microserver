@@ -3,8 +3,8 @@ package store_test
 import (
 	"testing"
 
-	"github.com/annadymovaa/avito-test/inetrnal/app/account"
-	"github.com/annadymovaa/avito-test/inetrnal/app/store"
+	"github.com/annadymovaa/microserver/inetrnal/app/account"
+	"github.com/annadymovaa/microserver/inetrnal/app/store"
 	"github.com/stretchr/testify/assert"
 )
 

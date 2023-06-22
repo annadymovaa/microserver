@@ -4,7 +4,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/annadymovaa/avito-test/inetrnal/app/store"
+	"github.com/annadymovaa/microserver/inetrnal/app/store"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
 )

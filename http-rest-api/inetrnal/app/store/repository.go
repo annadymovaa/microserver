@@ -1,6 +1,6 @@
 package store
 
-import "github.com/annadymovaa/avito-test/inetrnal/app/account"
+import "github.com/annadymovaa/microserver/inetrnal/app/account"
 
 type Repository struct {
 	store *Store
