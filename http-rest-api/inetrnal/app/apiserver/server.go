@@ -12,7 +12,7 @@ import (
 
 	"github.com/gorilla/handlers"
 
-	"github.com/annadymovaa/microserver/inetrnal/app/account"
+	"github.com/annadymovaa/microserver/inetrnal/app/model"
 
 	"github.com/annadymovaa/microserver/inetrnal/app/store"
 
@@ -116,13 +116,13 @@ func (s *server) authenticateUser(next http.Handler) http.Handler {
 			return
 		}
 
-		id, ok := session.Values["user_id"]
+		email, ok := session.Values["email"]
 		if !ok {
 			s.error(w, r, http.StatusUnauthorized, errNotAuthenticated)
 			return
 		}
 
-		a, err := s.store.Account().FindByUser(id.(int))
+		a, err := s.store.User().FindByEmail(email.(string))
 		if err != nil {
 			s.error(w, r, http.StatusUnauthorized, errNotAuthenticated)
 			return
@@ -166,10 +166,9 @@ func (s *server) authenticateUser(next http.Handler) http.Handler {
 
 func (s *server) handleSessionsCreate() http.HandlerFunc {
 	type request struct {
-		Id_account uint64 `json: "id_account"`
-		Id_user    uint64 `json: "id_user`
-		Amount     int    `json: "amount"`
-		Type_acc   string `json: "type_acc" sql:"type:type_account"`
+		Id_account uint64  `json:"id_account"`
+		Id_user    uint64  `json:"id_user`
+		Amount     float64 `json:"amount"`
 	}
 
 	return func(w http.ResponseWriter, r *http.Request) {
@@ -203,7 +202,7 @@ func (s *server) handleSessionsCreate() http.HandlerFunc {
 
 func (s *server) handleWhoami() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		s.respond(w, r, http.StatusOK, r.Context().Value(ctxKeyUser).(*account.Account))
+		s.respond(w, r, http.StatusOK, r.Context().Value(ctxKeyUser).(*model.Account))
 	}
 }
 

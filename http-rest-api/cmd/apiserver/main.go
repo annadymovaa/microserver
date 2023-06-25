@@ -6,7 +6,6 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/annadymovaa/microserver/inetrnal/app/apiserver"
-	//"github.com/annadymovaa/avito-test/tree/start/http-rest-api/inetrnal/app/apiserver"
 )
 
 var (
@@ -31,4 +30,5 @@ func main() {
 	if err := s.Start(); err != nil {
 		log.Fatal(err)
 	}
+
 }

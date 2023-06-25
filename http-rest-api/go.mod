@@ -11,9 +11,13 @@ require (
 )
 
 require (
+	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/felixge/httpsnoop v1.0.3 // indirect
+	github.com/go-ozzo/ozzo-validation v3.6.0+incompatible // indirect
 	github.com/gorilla/securecookie v1.1.1 // indirect
+	github.com/hjr265/loadcat v0.1.1 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect
+	golang.org/x/crypto v0.10.0 // indirect
 )
 
 require (
